@@ -12,6 +12,7 @@ jobs:
     runs-on: [ubuntu-latest]
 
     steps:
+      # test
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
 
       - uses: actions/checkout@v2
@@ -24,5 +25,6 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-build-
             ${{ runner.OS }}-
+
       - name: yarn install
         run: yarn install
