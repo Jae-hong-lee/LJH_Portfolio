@@ -2,8 +2,9 @@ name: test-github-action
 
 on:
   push:
-    branches:
-      - develop
+    branches: [master, develop]
+  pull_request:
+    branches: [master]
 
 jobs:
   deploy:
@@ -11,42 +12,17 @@ jobs:
     runs-on: [ubuntu-latest]
 
     steps:
-      # - uses: actions/checkout@v2
-
-      # - name: Cache node modules # node modules 캐싱
-      #   uses: actions/cache@v1
-      #   with:
-      #     path: node_modules
-      #     key: ${{ runner.OS }}-master-build-${{ hashFiles('**/yarn.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.OS }}-build-
-      #       ${{ runner.OS }}-
-
-      - name: yarn install
-        run: yarn install
-
-      - name: test Completion
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
 
-      # - name: Build
-      #   run: yarn build:ssg
+      - uses: actions/checkout@v2
 
-      # - name: SHOW AWS CLI VERSION
-      #   env:
-      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #   run: |
-      #     aws --version
-      # - name: Ls in build
-      #   run: |
-      #     ls -la
-
-      # - name: S3 Bucket ls
-      #   env:
-      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #   run: |
-      #     aws s3 cp \
-      #       --recursive \
-      #       --region ap-northeast-2 \
-      #       out s3://marketbeer.shop
+      - name: Cache node modules # node modules 캐싱
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-master-build-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
+      - name: yarn install
+        run: yarn install
