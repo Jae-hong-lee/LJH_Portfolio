@@ -3,7 +3,7 @@
 ### 사용 기술
 
 ```
-yarn(5.1.1),react(18.2.0), next(12.3.4), recoil(0.7.6), emotion(11.10.5)
+yarn(5.1.1),react(18.2.0), next(12.3.4), recoil(0.7.6), emotion(11.10.5), github actions, aws(s3)
 ```
 
 ### Commit Message Convention
