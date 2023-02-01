@@ -28,7 +28,7 @@ jobs:
         run: yarn install
 
       - name: Build
-        run: yarn build
+        run: yarn build:ssg
 
       - name: SHOW AWS CLI VERSION
         env:
@@ -53,4 +53,4 @@ jobs:
           aws s3 cp \
             --recursive \
             --region ap-northeast-2 \
-            s3://github-action-portfolio
+            out s3://github-action-portfolio
