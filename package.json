@@ -12,11 +12,16 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
     "antd": "^5.1.6",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "recoil": "^0.7.6"
+    "recoil": "^0.7.6",
+    "typescript": "^4.9.5"
   },
   "devDependencies": {
     "eslint": "8.32.0",
