@@ -1,4 +1,9 @@
 import Head from "next/head";
+import CareerPage from "./career";
+import ContactPage from "./contact";
+import MainHomePage from "./home";
+import ProjectPage from "./project";
+import SkillPage from "./skill";
 
 export default function Home() {
   return (
@@ -8,7 +13,11 @@ export default function Home() {
         <meta name="description" content="portfolio site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>재홍 포트폴리오</h1>
+      <MainHomePage />
+      <CareerPage />
+      <SkillPage />
+      <ProjectPage />
+      <ContactPage />
     </div>
   );
 }
