@@ -32,7 +32,9 @@ export const Navbar = styled.nav`
 
 export const NavbarMenu = styled.li`
   list-style: none;
-  /* margin-right: 15px; */
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const NavText = styled.a`
@@ -58,5 +60,9 @@ export const NavText = styled.a`
   :focus {
     color: #845ec2;
     font-size: 25px;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 `;
