@@ -9,6 +9,7 @@ export const Header = styled.h1`
   font-size: 36px;
   font-weight: 700;
   border-bottom: 4px solid black;
+  cursor: pointer;
   &:hover {
     border-bottom: 5px solid #845ec2;
     transition-duration: 0.5s;
