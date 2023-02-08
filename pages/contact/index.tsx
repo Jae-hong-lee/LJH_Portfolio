@@ -2,7 +2,7 @@ import ContactContainer from "../../src/component/contact/contact.container";
 import styled from "@emotion/styled";
 import TitleHeader from "../../src/common/Title";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
 
 export default function ContactPage() {
   return (
-    <Wrapper>
+    <Wrapper id="contact">
       <TitleHeader title="Contact " />
       <ContactContainer />
     </Wrapper>
