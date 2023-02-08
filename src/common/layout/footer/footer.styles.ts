@@ -8,7 +8,7 @@ export const FooterWrapper = styled.div`
   width: 100%;
   height: 120px;
   padding: 0px 50px;
-  background-color: #dfedf4;
+  background-color: #e5e7eb;
 `;
 
 export const FooterTitle = styled.div`
