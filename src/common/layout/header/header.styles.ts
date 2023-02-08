@@ -1,11 +1,25 @@
 import styled from "@emotion/styled";
 
 interface IPage {
-  id: string;
   isPosition: string;
+  onClick: any;
+  Address: string;
 }
 
 export const HeaderWrapper = styled.nav`
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 70px;
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  /* 다크모드 */
+  /* https://mycolor.space/?hex=%23845EC2&sub=1 */
+  /* background-color: #3c3841;  */
   animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   @keyframes focus-in-expand {
     0% {
@@ -18,17 +32,6 @@ export const HeaderWrapper = styled.nav`
       opacity: 1;
     }
   }
-  width: 100%;
-  height: 70px;
-  padding: 0px 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  /* 다크모드 */
-  /* https://mycolor.space/?hex=%23845EC2&sub=1 */
-  /* background-color: #3c3841;  */
 `;
 
 export const Logo = styled.a`
@@ -53,16 +56,17 @@ export const NavText = styled.a`
   text-decoration: none;
   color: black;
   font-weight: 500;
-  font-size: 20px;
+  font-size: ${(props: IPage) =>
+    props.Address === props.isPosition ? " 25px" : "20px"};
   margin-right: 15px;
-
-  color: ${(props: IPage) =>
-    props.id === props.isPosition ? " #845EC2" : "#808080"};
-  border-bottom: ${(props: IPage) =>
-    props.id === props.isPosition ? "3px solid #845EC2" : "none"};
-
+  color: #808080;
   cursor: pointer;
   transition: 0.2s;
+
+  color: ${(props: IPage) =>
+    props.Address === props.isPosition ? " #845EC2" : "#808080"};
+  border-bottom: ${(props: IPage) =>
+    props.Address === props.isPosition ? "3px solid #845EC2" : "none"};
 
   &:hover {
     color: #845ec2;

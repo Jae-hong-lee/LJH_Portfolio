@@ -58,7 +58,7 @@ export default function CareerContainer() {
     <>
       {education.map((el, idx: number) => {
         return (
-          <CS.CardContainer key={idx}>
+          <CS.CardContainer key={idx + "C"}>
             <CS.CardContent>
               <CS.ImgDiv>
                 <CS.EduImg
@@ -73,8 +73,8 @@ export default function CareerContainer() {
                   <CS.AboutTitle>{el.title}</CS.AboutTitle>
                   <CS.Date>{el.date}</CS.Date>
                 </CS.TitleWrapper>
-                {el.desc.map((desc) => {
-                  return <CS.Li key={idx}>{desc}</CS.Li>;
+                {el.desc.map((desc, index: number) => {
+                  return <CS.Li key={el.title + index}>{desc}</CS.Li>;
                 })}
               </CS.Content>
             </CS.CardContent>

@@ -93,7 +93,7 @@ export default function SkillUI() {
       <SS.SkillBarWrapper>
         {SkillData.map((el, idx: number) => {
           return (
-            <SS.BarWrapper key={idx}>
+            <SS.BarWrapper key={idx + "L1"}>
               <SS.InfoWrapper>
                 <SS.InfoIMG src={el.src} style={{ width: el.width }} />
                 <SS.InfoTitle> {el.title}</SS.InfoTitle>
@@ -112,7 +112,7 @@ export default function SkillUI() {
       <SS.ETCWrapper>
         {DeployEtcData.map((el, idx: number) => {
           return (
-            <SS.ETCBox key={idx}>
+            <SS.ETCBox key={idx + "L2"}>
               <SS.InfoIMG src={el.src} style={{ width: el.width }} />
               <SS.InfoTitle>{el.title}</SS.InfoTitle>
             </SS.ETCBox>
