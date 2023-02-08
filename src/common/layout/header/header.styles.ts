@@ -5,7 +5,19 @@ interface IPage {
   isPosition: string;
 }
 
-export const HeaderWrapper = styled.div`
+export const HeaderWrapper = styled.nav`
+  animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  @keyframes focus-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
   width: 100%;
   height: 70px;
   padding: 0px 40px;
@@ -24,7 +36,7 @@ export const Logo = styled.a`
   font-weight: 600;
 `;
 
-export const Navbar = styled.nav`
+export const Navbar = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import * as HS from "./header.styles";
 
 export default function HeaderPresenter() {
-  const LinkData = ["career", "skills", "projects", "contact"];
+  const LinkData = ["career", "skill", "projects", "contact"];
   const router = useRouter();
 
   return (
