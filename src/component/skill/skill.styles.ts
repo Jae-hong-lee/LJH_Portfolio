@@ -1,51 +1,83 @@
 import styled from "@emotion/styled";
 
+export interface IBar {
+  bar: string;
+}
+
 export const Wrapper = styled.div`
+  overflow: hidden;
   display: grid;
-  width: 90%;
+  width: 80%;
   padding: 2rem;
   place-items: center;
-  background-color: coral;
   border: 1px solid black;
   border-radius: 15px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
   &:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 14px 28px rgba(0, 0, 0, 0.22);
+  }
+  @media screen and (max-width: 767px) {
+    padding: 1rem;
+    width: 100%;
   }
 `;
 
 export const SkillBarWrapper = styled.div`
   width: 100%;
   height: 100%;
-  background-color: cornsilk;
-  padding: 3rem 4rem;
+  padding: 3rem 3rem;
+  @media screen and (max-width: 767px) {
+    padding: 1rem;
+  }
+`;
+
+export const SkillTitle = styled.div`
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+`;
+
+export const Line = styled.div`
+  width: 100%;
+  border-bottom: 2px dashed black;
 `;
 
 export const BarWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: 20px 0px;
+  &:first-child {
+    margin-top: 0px;
+  }
+  &:last-child {
+    margin-bottom: 0px;
+  }
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
     align-items: stretch;
   }
-  margin: 20px 0px;
-  &:first-child {
-    margin-top: 0px;
-  }
 `;
 
 export const InfoWrapper = styled.div`
-  width: 30%;
+  width: 35%;
   display: flex;
+  gap: 10px;
   align-items: center;
+  transition-duration: 0.5s;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const InfoIMG = styled.img`
-  width: 50px;
+  height: auto;
+
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -55,7 +87,8 @@ export const InfoTitle = styled.span`
   font-size: 17px;
   font-weight: 700;
   opacity: 0;
-  animation: showText 1.5s 1s linear forwards;
+  animation: showText 1s 1s linear forwards;
+  text-align: center;
   @keyframes showText {
     100% {
       opacity: 1;
@@ -65,7 +98,7 @@ export const InfoTitle = styled.span`
 
 export const Progresline = styled.div`
   height: 10px;
-  width: 70%;
+  width: 60%;
   background: #f0f0f0;
   position: relative;
   transform: scaleX(0);
@@ -85,8 +118,7 @@ export const Progresline = styled.div`
 `;
 
 export const ProgreslineBar = styled.span`
-  width: 90%;
-  /* width 로 bar 조절 */
+  width: ${(props: IBar) => props.bar};
   height: 100%;
   position: absolute;
   border-radius: 10px;
@@ -95,11 +127,6 @@ export const ProgreslineBar = styled.span`
   background: #c493ff;
   animation: animate 1.5s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 
-  @keyframes showText2 {
-    100% {
-      opacity: 1;
-    }
-  }
   ::before {
     position: absolute;
     content: "";
@@ -116,7 +143,7 @@ export const ProgreslineBar = styled.span`
   }
 
   ::after {
-    content: "90%";
+    content: attr(id);
     position: absolute;
     top: -23px;
     right: 0;
@@ -128,5 +155,33 @@ export const ProgreslineBar = styled.span`
     border-radius: 3px;
     opacity: 0;
     animation: showText2 0.5s 1.5s linear forwards;
+  }
+
+  @keyframes showText2 {
+    100% {
+      opacity: 1;
+    }
+  }
+`;
+
+export const ETCWrapper = styled.div`
+  padding-top: 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  @media screen and (max-width: 767px) {
+    padding-top: 1rem;
+  }
+`;
+
+export const ETCBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition-duration: 0.5s;
+  &:hover {
+    transform: scale(1.2);
   }
 `;

@@ -11,6 +11,15 @@ export const Wrapper = styled.div`
     height: 100%;
     margin-top: 50px;
   }
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  @keyframes scale-up-center {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 `;
 
 export const ProfileContentBox = styled.div`
@@ -39,11 +48,10 @@ export const TitleHeader = styled.h1`
 
 export const TitleSubHeader = styled.h3`
   width: 22.5ch;
-  animation: typing 2s steps(23), blink 0.5s step-end infinite alternate;
+  animation: typing 2s steps(30, end), blin-caret 0.5s step-end infinite;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-
   @keyframes typing {
     from {
       width: 0;
