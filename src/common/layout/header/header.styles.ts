@@ -56,17 +56,13 @@ export const NavText = styled.a`
   text-decoration: none;
   color: black;
   font-weight: 500;
-  font-size: ${(props: IPage) =>
-    props.Address === props.isPosition ? " 25px" : "20px"};
+  font-size: 20px;
   margin-right: 15px;
   color: #808080;
   cursor: pointer;
   transition: 0.2s;
 
-  color: ${(props: IPage) =>
-    props.Address === props.isPosition ? " #845EC2" : "#808080"};
-  border-bottom: ${(props: IPage) =>
-    props.Address === props.isPosition ? "3px solid #845EC2" : "none"};
+  color: #808080;
 
   &:hover {
     color: #845ec2;
