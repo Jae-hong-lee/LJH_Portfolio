@@ -14,45 +14,51 @@ interface IEtc {
 
 const SkillData: ISkill[] = [
   {
+    title: "Emotion",
+    src: `/skill/emotion.png`,
+    width: "80px",
+    bar: "100%",
+  },
+  {
     title: "JavaScript",
     src: `/skill/JavaScript.png`,
-    width: "50px",
+    width: "80px",
     bar: "100%",
   },
   {
     title: "TypeScript",
     src: `/skill/TypeScript.png`,
-    width: "50px",
+    width: "80px",
     bar: "70%",
   },
   {
     title: "React",
     src: `/skill/React.png`,
-    width: "50px",
+    width: "80px",
     bar: "100%",
   },
   {
     title: "Recoil",
     src: `/skill/ETC/Recoil.png`,
-    width: "50px",
-    bar: "100%",
+    width: "80px",
+    bar: "90%",
   },
   {
     title: "Graphql & ApolloClient",
     src: `/skill/GraphQL.png`,
-    width: "50px",
-    bar: "100%",
+    width: "80px",
+    bar: "90%",
   },
   {
     title: "Next",
     src: `/skill/Next.png`,
-    width: "50px",
+    width: "80px",
     bar: "80%",
   },
   {
     title: "Firebase",
     src: `/skill/ETC/Firebase.png`,
-    width: "50px",
+    width: "80px",
     bar: "80%",
   },
 ];

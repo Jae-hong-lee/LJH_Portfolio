@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
 export const SkillBarWrapper = styled.div`
   width: 100%;
   height: 100%;
-  padding: 3rem 3rem;
+  padding: 2rem 1rem;
   @media screen and (max-width: 767px) {
     padding: 1rem;
   }
@@ -49,7 +49,7 @@ export const BarWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 20px 0px;
   &:first-child {
     margin-top: 0px;
@@ -65,7 +65,7 @@ export const BarWrapper = styled.div`
 `;
 
 export const InfoWrapper = styled.div`
-  width: 35%;
+  width: 30%;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -77,15 +77,14 @@ export const InfoWrapper = styled.div`
 
 export const InfoIMG = styled.img`
   height: auto;
-
   @media screen and (max-width: 767px) {
     display: none;
   }
 `;
 
 export const InfoTitle = styled.span`
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 600;
   opacity: 0;
   animation: showText 1s 1s linear forwards;
   text-align: center;
@@ -97,7 +96,7 @@ export const InfoTitle = styled.span`
 `;
 
 export const Progresline = styled.div`
-  height: 10px;
+  height: 15px;
   width: 60%;
   background: #f0f0f0;
   position: relative;

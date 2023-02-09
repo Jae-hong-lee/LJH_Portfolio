@@ -8,7 +8,7 @@ export const Wrapper = styled.section`
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0px 30px;
+  padding: 0px 25px;
 `;
 
 export default function SkillPage() {

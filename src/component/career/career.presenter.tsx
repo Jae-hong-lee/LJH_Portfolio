@@ -35,7 +35,7 @@ const education: educationType[] = [
     ],
     src: `/career.img/Algorithm.png`,
     width: "150px",
-    height: "150px",
+    height: "110px",
   },
   {
     title: "코드캠프 (Code.camp)",
@@ -49,7 +49,7 @@ const education: educationType[] = [
     ],
     src: `/career.img/codecamp.logo.png`,
     width: "150px",
-    height: "60px",
+    height: "50px",
   },
 ];
 

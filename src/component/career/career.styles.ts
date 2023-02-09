@@ -20,10 +20,11 @@ export const CardContent = styled.div`
   width: 80%;
   padding: 1rem;
   margin-bottom: 10px;
+  transition-duration: 0.5s;
   &:hover {
     border: 3px solid #845ec2;
     border-radius: 15px;
-    transition-duration: 0.5s;
+    box-shadow: 0 0 5px;
   }
 `;
 
