@@ -87,7 +87,7 @@ export const InfoTitle = styled.span`
   font-weight: 600;
   opacity: 0;
   animation: showText 1s 1s linear forwards;
-  text-align: center;
+  text-align: left;
   @keyframes showText {
     100% {
       opacity: 1;
