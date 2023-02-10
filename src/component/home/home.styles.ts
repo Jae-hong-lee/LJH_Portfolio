@@ -7,9 +7,11 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   padding: 0px 30px;
+  @media screen and (max-width: 850px) {
+    height: 100%;
+  }
   @media screen and (max-width: 767px) {
     height: 100%;
-    margin-top: 50px;
   }
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   @keyframes scale-up-center {
@@ -46,10 +48,9 @@ export const TitleHeader = styled.h1`
   }
 `;
 
-export const TitleSubHeader = styled.h3`
+export const TitleSubHeader = styled.h2`
   width: 22.5ch;
   white-space: nowrap;
-  overflow: hidden;
   transition: 0.5s;
 
   animation: shake-horizontal 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
@@ -79,19 +80,16 @@ export const TitleSubHeader = styled.h3`
 `;
 
 export const ProfileContent = styled.p`
+  color: #94a3b8;
   line-height: 130%;
   text-align: left;
 `;
 
 export const ProfileImg = styled.div`
-  background-color: gray;
   max-width: 100%;
   width: 40%;
   height: 60%;
   margin: 30px;
-  border-radius: 10px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
   @media screen and (max-width: 767px) {
     display: none;
   }

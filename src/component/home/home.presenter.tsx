@@ -1,3 +1,4 @@
+import ProfileAni from "../../common/lottie_animation/profile_animaition";
 import * as HS from "./home.styles";
 
 export default function HomeUI() {
@@ -12,13 +13,16 @@ export default function HomeUI() {
         </HS.ProfileTitle>
 
         <HS.ProfileContent>
-          <b>
-            완벽한 것은 존재하지 않다고 생각하기에 개선 요소를 찾으려고 노력하는
-            신입 프론트엔드 개발자 이재홍입니다.
-          </b>
-          <br />
-          <b>React</b> ,<b>Emotion</b>, <b>Next.js</b>, <b>GrapgQL</b> ,{" "}
-          <b>AWS</b> , <b>Docker</b> 를 이용하여 웹 개발, 배포 경험이 있습니다.{" "}
+          <span style={{ color: "black" }}>
+            <b>
+              완벽한 것은 존재하지 않다고 생각하기에 개선 요소를 찾으려고
+              노력하는 신입 프론트엔드 개발자 이재홍입니다.
+            </b>
+            <br />
+            <b>React</b> ,<b>Emotion</b>, <b>Next.js</b>, <b>GrapgQL</b> ,{" "}
+            <b>AWS</b> , <b>Docker</b> 를 이용하여 웹 개발, 배포 경험이
+            있습니다.{" "}
+          </span>
           <br />
           <br />
           대학생 때 HTML과 CSS를 접할 기회가 생겼고, 단 몇 줄의 코드로 바로바로
@@ -37,7 +41,9 @@ export default function HomeUI() {
         </HS.ProfileContent>
       </HS.ProfileContentBox>
 
-      <HS.ProfileImg>Lottie 애니메이션 추가하기</HS.ProfileImg>
+      <HS.ProfileImg>
+        <ProfileAni />
+      </HS.ProfileImg>
     </HS.Wrapper>
   );
 }
