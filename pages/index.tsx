@@ -53,16 +53,14 @@ export async function getStaticProps() {
 
   const projects = await res.json();
 
-  const projectNames = projects.results.map(
-    (el: any) => el.properties.이름.title[0].plain_text
-  );
+  // const projectNames = projects.results.map(
+  //   (el: any) => el.properties.이름.title[0].plain_text
+  // );
 
-  const Aproject = projects.results.map((el: any) => el.properties);
-
-  console.log(`projectNames : ${projectNames}`);
+  // const Aproject = projects.results.map((el: any) => el.properties);
 
   return {
-    props: { projectNames, Aproject },
+    props: { projects },
     // getStaticProps() 메소드를 사용한다면 revalidate 로 데이터 변경시 갱신가능!
     // revalidate: 1 // 데이터 변경이 있으면 갱신 1초 마다
   };
