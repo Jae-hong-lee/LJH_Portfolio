@@ -1,4 +1,4 @@
-import { Button } from "antd";
+import DarkModeButton from "../../button/darkmode";
 import * as HS from "./header.styles";
 
 export default function HeaderPresenter() {
@@ -16,8 +16,8 @@ export default function HeaderPresenter() {
             </HS.NavbarMenu>
           );
         })}
-
-        <Button>버튼</Button>
+        {/* 다크모드 버튼 작업 */}
+        <DarkModeButton />
       </HS.Navbar>
     </HS.HeaderWrapper>
   );
