@@ -1,8 +1,6 @@
 import Head from "next/head";
-import { useEffect } from "react";
-import { useRecoilState } from "recoil";
 import { DATABASE_ID, TOKEN } from "../config";
-import { projectNamesState } from "../src/common/store";
+
 import CareerPage from "./career";
 import ContactPage from "./contact";
 import MainHomePage from "./home";
@@ -10,13 +8,7 @@ import ProjectPage from "./project";
 import SkillPage from "./skill";
 
 export default function Home(props: any) {
-  // recoil 을 통해 전역변수로 props 저장 후 ProjectPage에서 활용
-  const [, setProjectNames] = useRecoilState(projectNamesState);
-
-  useEffect(() => {
-    setProjectNames(props.projectNames);
-  }, []);
-
+  console.log(props.projectNames);
   return (
     <div>
       <Head>
