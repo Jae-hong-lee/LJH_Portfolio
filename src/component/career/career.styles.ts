@@ -24,7 +24,7 @@ export const CardContent = styled.div`
   &:hover {
     border: 3px solid #845ec2;
     border-radius: 15px;
-    box-shadow: 0 0 5px;
+    box-shadow: 0 0 5px gray;
   }
 `;
 

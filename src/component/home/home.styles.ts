@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 100vh;
-  padding: 0px 30px;
+  padding: 0px 5rem;
   @media screen and (max-width: 850px) {
     height: 100%;
   }
@@ -34,7 +34,7 @@ export const ProfileContentBox = styled.div`
 `;
 
 export const ProfileTitle = styled.div`
-  line-height: 140%;
+  line-height: 150%;
   text-align: left;
 `;
 
@@ -49,8 +49,7 @@ export const TitleHeader = styled.h1`
 `;
 
 export const TitleSubHeader = styled.h2`
-  width: 22.5ch;
-  white-space: nowrap;
+  width: 100%;
   transition: 0.5s;
 
   animation: shake-horizontal 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;

@@ -31,7 +31,7 @@ export const HeaderWrapper = styled.nav`
 
 export const Logo = styled.a`
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 700;
 `;
 
 export const Navbar = styled.div`
@@ -50,7 +50,7 @@ export const NavbarMenu = styled.li`
 export const NavText = styled.a`
   text-decoration: none;
   color: black;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   margin-right: 15px;
   color: #808080;
