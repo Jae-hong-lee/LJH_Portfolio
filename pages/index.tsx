@@ -33,7 +33,7 @@ export default function Home(props: any) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const options = {
     method: "POST",
     headers: {
@@ -60,12 +60,6 @@ export async function getServerSideProps() {
   );
 
   const projects = await res.json();
-
-  // const projectNames = projects.results.map(
-  //   (aProject: any) => aProject.properties.Name.title[0].plain_text
-  // );
-
-  // recoil 전역변수
 
   const projectNames = projects.results.map(
     (el: any) => el.properties.이름.title[0].plain_text
