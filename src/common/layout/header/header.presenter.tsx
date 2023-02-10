@@ -1,5 +1,4 @@
 import { Button } from "antd";
-import { useState } from "react";
 import * as HS from "./header.styles";
 
 export default function HeaderPresenter() {

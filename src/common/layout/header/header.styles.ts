@@ -1,22 +1,17 @@
 import styled from "@emotion/styled";
 
-interface IPage {
-  isPosition: string;
-  onClick: any;
-  Address: string;
-}
-
 export const HeaderWrapper = styled.nav`
-  position: fixed;
+  position: sticky;
+  top: 0px;
   z-index: 1;
-  width: 100%;
   height: 70px;
+  width: 100%;
   padding: 0px 40px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: white;
+
   /* 다크모드 */
   /* https://mycolor.space/?hex=%23845EC2&sub=1 */
   /* background-color: #3c3841;  */

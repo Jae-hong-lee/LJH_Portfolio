@@ -84,7 +84,7 @@ export const InfoIMG = styled.img`
 
 export const InfoTitle = styled.span`
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   opacity: 0;
   animation: showText 1s 1s linear forwards;
   text-align: left;
