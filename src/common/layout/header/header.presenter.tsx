@@ -2,7 +2,7 @@ import DarkModeButton from "../../button/darkmode";
 import * as HS from "./header.styles";
 
 export default function HeaderPresenter() {
-  const LinkData = ["career", "skill", "projects", "contact"];
+  const LinkData = ["career", "skill", "project", "contact"];
 
   return (
     <HS.HeaderWrapper>

@@ -18,9 +18,9 @@ export const Wrapper = styled.section`
 
 export default function ProjectPage(props: any) {
   return (
-    <Wrapper id="projects">
+    <Wrapper id="project">
       <TitleHeader title="Projects" />
-      <ProjectContainer props={props.projects} />
+      <ProjectContainer projects={props.projects} />
     </Wrapper>
   );
 }
