@@ -6,7 +6,7 @@ import MainHomePage from "./home";
 import ProjectPage from "./project";
 import SkillPage from "./skill";
 
-export default function Home(props: any) {
+export default function Home({ projects }: { projects: any }) {
   return (
     <div>
       <Head>
@@ -18,7 +18,7 @@ export default function Home(props: any) {
       <CareerPage />
       <SkillPage />
       {/* getStaticProps 로 받은 노션 API props로 내려줌 */}
-      <ProjectPage projects={props.projects} />
+      <ProjectPage projects={projects} />
 
       <ContactPage />
     </div>
@@ -57,12 +57,6 @@ export async function getStaticProps() {
   );
 
   const projects = await res.json();
-
-  // const projectNames = projects.results.map(
-  //   (el: any) => el.properties.이름.title[0].plain_text
-  // );
-
-  // const Aproject = projects.results.map((el: any) => el.properties);
 
   return {
     props: { projects },
