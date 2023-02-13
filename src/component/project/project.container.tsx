@@ -1,5 +1,5 @@
 import ProjectUI from "./project.presenter";
 
-export default function ProjectContainer() {
-  return <ProjectUI />;
+export default function ProjectContainer(props: any) {
+  return <ProjectUI projects={props.props} />;
 }

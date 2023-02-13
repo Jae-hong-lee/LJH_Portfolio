@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { DATABASE_ID, TOKEN } from "../config";
-
 import CareerPage from "./career";
 import ContactPage from "./contact";
 import MainHomePage from "./home";
@@ -8,7 +7,6 @@ import ProjectPage from "./project";
 import SkillPage from "./skill";
 
 export default function Home(props: any) {
-  console.log(props.projectNames);
   return (
     <div>
       <Head>
@@ -19,11 +17,18 @@ export default function Home(props: any) {
       <MainHomePage />
       <CareerPage />
       <SkillPage />
-      <ProjectPage />
+      {/* getStaticProps 로 받은 노션 API props로 내려줌 */}
+      <ProjectPage projects={props.projects} />
+
       <ContactPage />
     </div>
   );
 }
+
+// pages 폴더에서 getStaticProps 사용하기,
+// 폴더에서 사용 안되는 이유: pages 폴더는 router를 담당하는 곳,
+// 폴더 혹은 파일 이름만 지정해서 함수를 만들면 그에 해당하는 router가 자동으로 지정됩니다.
+// https://velog.io/@taeung/Next.js-getStaticProps-%EC%82%AC%EC%9A%A9%EA%B8%B0
 
 export async function getStaticProps() {
   const options = {

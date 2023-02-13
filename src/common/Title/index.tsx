@@ -6,7 +6,7 @@ interface ITitleHeader {
 
 export const Header = styled.h1`
   margin-top: 73px;
-  font-size: 36px;
+  font-size: 2.5rem;
   font-weight: 700;
   border-bottom: 4px solid black;
   cursor: pointer;
