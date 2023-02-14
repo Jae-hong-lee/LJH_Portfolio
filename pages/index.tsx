@@ -21,7 +21,7 @@ export default function Home({ projects }: { projects: any }) {
       {/* getStaticProps 로 받은 노션 API props로 내려줌 */}
       <ProjectPage projects={projects} />
 
-      <ContactPage />
+      {/* <ContactPage /> */}
     </div>
   );
 }
