@@ -2,8 +2,6 @@ import { Card, Col, Divider, Row, Tag } from "antd";
 import * as PS from "./project.styles";
 
 export default function ProjectUI(props: any) {
-  console.log("UI 페이지", props.projects.results);
-
   return (
     <PS.Wrapper>
       <Divider orientation="center">
@@ -29,7 +27,7 @@ export default function ProjectUI(props: any) {
                   hoverable
                   title={`${el.properties.이름.title[0].plain_text}`}
                   extra={
-                    <a href={el.url} target="_blank">
+                    <a href={el.url} target="_blank" rel="noopener noreferrer">
                       더보기
                     </a>
                   }
@@ -47,7 +45,11 @@ export default function ProjectUI(props: any) {
                     진행기간: {el.properties.진행기간.date.start}~
                     {el.properties.진행기간.date.end}
                     <br />
-                    <a href={el.properties.GitHub.url} target="_blank">
+                    <a
+                      href={el.properties.GitHub.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       깃허브 바로가기
                     </a>
                   </PS.ProjectContant>
