@@ -60,6 +60,7 @@ export async function getStaticProps() {
 
   return {
     props: { projects },
+    // fallback: true,
     // getStaticProps() 메소드를 사용한다면 revalidate 로 데이터 변경시 갱신가능!
     // revalidate: 1 // 데이터 변경이 있으면 갱신 1초 마다
   };
