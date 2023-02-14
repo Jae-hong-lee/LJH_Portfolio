@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
   }
   @media screen and (max-width: 767px) {
     height: 100%;
+    padding: 0px 1rem;
   }
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   @keyframes scale-up-center {
@@ -34,12 +35,12 @@ export const ProfileContentBox = styled.div`
 `;
 
 export const ProfileTitle = styled.div`
-  line-height: 150%;
   text-align: left;
 `;
 
 export const TitleHeader = styled.h1`
   color: #845ec2;
+  line-height: 100%;
   font-weight: 700;
   transition-duration: 0.5s;
   &:hover {
