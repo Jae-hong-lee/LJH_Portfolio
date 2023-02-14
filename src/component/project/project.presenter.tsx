@@ -27,7 +27,7 @@ export default function ProjectUI(props: any) {
                   hoverable
                   title={`${el.properties.이름.title[0].plain_text}`}
                   extra={
-                    <a href={el.url} target="_blank" rel="noopener noreferrer">
+                    <a href={el.url} target="_blank" rel="noopener">
                       더보기
                     </a>
                   }
@@ -48,7 +48,7 @@ export default function ProjectUI(props: any) {
                     <a
                       href={el.properties.GitHub.url}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener"
                     >
                       깃허브 바로가기
                     </a>
