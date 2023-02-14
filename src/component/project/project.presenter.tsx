@@ -7,13 +7,12 @@ export default function ProjectUI(props: any) {
       <Divider orientation="center">
         <PS.Projectlength>
           총 프로젝트 :{" "}
-          {props.projects ? (
-            <PS.ProjectNum>{props.projects.results.length}</PS.ProjectNum>
-          ) : (
-            <PS.Loading>로딩중</PS.Loading>
+          {props.projects && (
+            <PS.ProjectNum>{props.projects.results?.length}</PS.ProjectNum>
           )}
         </PS.Projectlength>
       </Divider>
+
       {/* xs : 모바일, sm : 태플릿, md : 노트북, lg : 데스크탑 */}
       {/* Grid Card Box */}
       {props.projects && (
