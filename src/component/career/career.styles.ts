@@ -13,14 +13,21 @@ export const CardContainer = styled.div`
       transform: scaleY(1);
     }
   }
+  margin-bottom: 1rem;
 `;
 
 export const CardContent = styled.div`
   display: flex;
   width: 80%;
   padding: 1rem;
-  margin-bottom: 10px;
   transition-duration: 0.5s;
+  @media (max-width: 992px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    padding: 0px 1rem;
+  }
   &:hover {
     border: 3px solid #845ec2;
     border-radius: 15px;

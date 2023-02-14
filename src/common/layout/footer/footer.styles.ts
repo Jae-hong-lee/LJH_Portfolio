@@ -9,11 +9,17 @@ export const FooterWrapper = styled.div`
   height: 120px;
   padding: 0px 50px;
   background-color: #e5e7eb;
+  @media screen and (max-width: 767px) {
+    height: 100px;
+  }
 `;
 
 export const FooterTitle = styled.div`
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 600;
+  @media screen and (max-width: 767px) {
+    font-size: 1rem;
+  }
 `;
 
 export const FooterSubTitle = styled.div`

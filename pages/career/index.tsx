@@ -8,6 +8,9 @@ export const Wrapper = styled.section`
   align-items: center;
   width: 100%;
   padding: 0px 30px;
+  @media screen and (max-width: 767px) {
+    padding: 0px 1rem;
+  }
 `;
 
 export default function CareerPage() {

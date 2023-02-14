@@ -17,8 +17,13 @@ export const Wrapper = styled.div`
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 14px 28px rgba(0, 0, 0, 0.22);
   }
-  @media screen and (max-width: 767px) {
+  @media (max-width: 992px) {
     padding: 1rem;
+    width: 90%;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0px 1rem;
     width: 100%;
   }
 `;
@@ -28,7 +33,7 @@ export const SkillBarWrapper = styled.div`
   height: 100%;
   padding: 2rem 1rem;
   @media screen and (max-width: 767px) {
-    padding: 1rem;
+    padding: 0rem;
   }
 `;
 
@@ -38,11 +43,18 @@ export const SkillTitle = styled.div`
   font-size: 30px;
   font-weight: 700;
   cursor: pointer;
+  @media screen and (max-width: 767px) {
+    font-size: 25px;
+    margin: 10px 0px;
+  }
 `;
 
 export const Line = styled.div`
   width: 100%;
   border-bottom: 2px dashed black;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 export const BarWrapper = styled.div`
@@ -58,9 +70,7 @@ export const BarWrapper = styled.div`
     margin-bottom: 0px;
   }
   @media screen and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    width: 100%;
   }
 `;
 
@@ -92,6 +102,10 @@ export const InfoTitle = styled.span`
     100% {
       opacity: 1;
     }
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 0.7rem;
+    font-weight: 700;
   }
 `;
 
@@ -170,7 +184,7 @@ export const ETCWrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   @media screen and (max-width: 767px) {
-    padding-top: 1rem;
+    padding-top: 0rem;
   }
 `;
 
