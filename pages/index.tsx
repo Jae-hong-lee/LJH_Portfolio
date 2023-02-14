@@ -7,6 +7,7 @@ import ProjectPage from "./project";
 import SkillPage from "./skill";
 
 export default function Home({ projects }: { projects: any }) {
+  console.log(projects);
   return (
     <div>
       <Head>
