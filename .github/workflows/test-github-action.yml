@@ -25,7 +25,7 @@ jobs:
       - name: yarn install
         run: yarn install
 
-      - name: Build
+      - name: Build # env 노션 API 키 생성
         run: yarn build:ssg
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
