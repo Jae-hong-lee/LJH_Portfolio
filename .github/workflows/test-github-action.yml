@@ -3,8 +3,6 @@ name: test-github-action
 on:
   push:
     branches: [master]
-  # pull_request:
-  #   branches: [master]
 
 jobs:
   deploy:
@@ -29,6 +27,9 @@ jobs:
 
       - name: Build
         run: yarn build:ssg
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
 
       - name: Deploy # S3에 배포하기
         env:
