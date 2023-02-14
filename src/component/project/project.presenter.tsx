@@ -26,11 +26,7 @@ export default function ProjectUI(props: any) {
                 <Card
                   hoverable
                   title={`${el.properties.이름.title[0].plain_text}`}
-                  extra={
-                    <a href={el.url} target="_blank" rel="noopener">
-                      더보기
-                    </a>
-                  }
+                  extra={<a href={el.url}>더보기</a>}
                   cover={
                     <PS.ProjectTitleIMG
                       alt="cover image"
@@ -45,13 +41,7 @@ export default function ProjectUI(props: any) {
                     진행기간: {el.properties.진행기간.date.start}~
                     {el.properties.진행기간.date.end}
                     <br />
-                    <a
-                      href={el.properties.GitHub.url}
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      깃허브 바로가기
-                    </a>
+                    <a href={el.properties.GitHub.url}>깃허브 바로가기</a>
                   </PS.ProjectContant>
                   <PS.ProjectStacks>
                     <PS.StackTitle>사용스택</PS.StackTitle>
