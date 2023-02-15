@@ -10,7 +10,7 @@ export const HeaderWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: ${(props: any) => props.theme.background};
 
   /* 다크모드 */
   /* https://mycolor.space/?hex=%23845EC2&sub=1 */
@@ -30,8 +30,10 @@ export const HeaderWrapper = styled.nav`
 `;
 
 export const Logo = styled.a`
+  text-decoration: none;
   font-size: 30px;
   font-weight: 700;
+  color: ${(props: any) => props.theme.text};
 `;
 
 export const Navbar = styled.div`
@@ -49,15 +51,12 @@ export const NavbarMenu = styled.li`
 
 export const NavText = styled.a`
   text-decoration: none;
-  color: black;
   font-weight: 600;
   font-size: 20px;
   margin-right: 15px;
   color: #808080;
   cursor: pointer;
   transition: 0.2s;
-
-  color: #808080;
 
   &:hover {
     color: #845ec2;

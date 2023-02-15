@@ -29,9 +29,7 @@ export const CardContent = styled.div`
     padding: 0px 1rem;
   }
   &:hover {
-    border: 3px solid #845ec2;
-    border-radius: 15px;
-    box-shadow: 0 0 5px gray;
+    box-shadow: ${(props: any) => props.theme.boxShadow};
   }
 `;
 
@@ -68,6 +66,7 @@ export const AboutTitle = styled.h2`
 export const Date = styled.span``;
 
 export const Li = styled.li`
+  color: ${(props: any) => props.theme.subtext};
   text-align: left;
   list-style: disc;
   list-style-position: inside;

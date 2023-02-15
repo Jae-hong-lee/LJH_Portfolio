@@ -42,41 +42,38 @@ export const TitleHeader = styled.h1`
   color: #845ec2;
   line-height: 100%;
   font-weight: 700;
-  transition-duration: 0.5s;
+  transition: 0.5s;
   &:hover {
-    font-size: 36px;
-    transform: scale(1);
+    animation: shake-horizontal 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+    @keyframes shake-horizontal {
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+      10%,
+      30%,
+      50%,
+      70% {
+        transform: translateX(-10px);
+      }
+      20%,
+      40%,
+      60% {
+        transform: translateX(10px);
+      }
+      80% {
+        transform: translateX(8px);
+      }
+      90% {
+        transform: translateX(-8px);
+      }
+    }
   }
 `;
 
 export const TitleSubHeader = styled.h2`
   width: 100%;
   transition: 0.5s;
-
-  animation: shake-horizontal 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  @keyframes shake-horizontal {
-    0%,
-    100% {
-      transform: translateX(0);
-    }
-    10%,
-    30%,
-    50%,
-    70% {
-      transform: translateX(-10px);
-    }
-    20%,
-    40%,
-    60% {
-      transform: translateX(10px);
-    }
-    80% {
-      transform: translateX(8px);
-    }
-    90% {
-      transform: translateX(-8px);
-    }
-  }
 `;
 
 export const ProfileContent = styled.p`

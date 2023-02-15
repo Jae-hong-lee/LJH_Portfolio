@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
   &:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 14px 28px rgba(0, 0, 0, 0.22);
+    box-shadow: ${(props: any) => props.theme.boxShadow};
   }
   @media (max-width: 992px) {
     padding: 1rem;

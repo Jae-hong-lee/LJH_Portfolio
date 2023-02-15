@@ -1,4 +1,4 @@
-import { Card, Col, Divider, Row, Tag } from "antd";
+import { Button, Card, Col, Divider, Row, Tag } from "antd";
 import * as PS from "./project.styles";
 
 export default function ProjectUI(props: any) {
@@ -22,10 +22,9 @@ export default function ProjectUI(props: any) {
               <Col xs={24} sm={12} md={12} lg={12} key={`Grid${idx}`}>
                 {/* 링크 설정 */}
                 {/* 이미지 크기조정 및 컨텐츠 작성 */}
-                <Card
-                  hoverable
+                <PS.CardTest
                   title={`${el.properties.이름.title[0].plain_text}`}
-                  extra={<a href={el.url}>더보기</a>}
+                  extra={<a href={el.url}>더 보기</a>}
                   cover={
                     <PS.ProjectTitleIMG
                       alt="cover image"
@@ -60,7 +59,7 @@ export default function ProjectUI(props: any) {
                       )}
                     </Row>
                   </PS.ProjectStacks>
-                </Card>
+                </PS.CardTest>
               </Col>
             ))}
           </Row>

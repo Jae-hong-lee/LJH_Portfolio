@@ -1,7 +1,8 @@
 import DarkModeButton from "../../button/darkmode";
+import { IDarkMode } from "./header.container";
 import * as HS from "./header.styles";
 
-export default function HeaderPresenter() {
+export default function HeaderPresenter(props: IDarkMode) {
   const LinkData = ["career", "skill", "project"];
 
   return (
@@ -21,7 +22,10 @@ export default function HeaderPresenter() {
           contact
         </HS.NavText>
         {/* 다크모드 버튼 작업 */}
-        <DarkModeButton />
+        <DarkModeButton
+          isDark={props.isDark}
+          toggleDarkMode={props.toggleDarkMode}
+        />
       </HS.Navbar>
     </HS.HeaderWrapper>
   );
