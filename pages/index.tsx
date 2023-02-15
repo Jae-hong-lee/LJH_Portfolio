@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { DATABASE_ID, TOKEN } from "../config";
 import CareerPage from "./career";
-import ContactPage from "./contact";
 import MainHomePage from "./home";
 import ProjectPage from "./project";
 import SkillPage from "./skill";
@@ -19,8 +18,6 @@ export default function Home({ projects }: { projects: any }) {
       <SkillPage />
       {/* getStaticProps 로 받은 노션 API props로 내려줌 */}
       <ProjectPage projects={projects} />
-
-      {/* <ContactPage /> */}
     </div>
   );
 }
