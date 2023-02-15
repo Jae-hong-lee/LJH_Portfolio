@@ -5,9 +5,10 @@ export interface IBar {
 }
 
 export const Wrapper = styled.div`
-  overflow: hidden;
-  display: grid;
+  /* overflow: hidden; */
+  /* display: grid; */
   width: 80%;
+  height: 100%;
   padding: 2rem;
   place-items: center;
   border: 1px solid black;
@@ -44,8 +45,8 @@ export const SkillTitle = styled.div`
   font-weight: 700;
   cursor: pointer;
   @media screen and (max-width: 767px) {
-    font-size: 25px;
-    margin: 10px 0px;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 `;
 
