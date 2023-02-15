@@ -1,4 +1,19 @@
 import styled from "@emotion/styled";
+import { Card } from "antd";
+
+export const CardTest = styled(Card)`
+  border: none;
+  .ant-card-head {
+    background: ${(props: any) => props.theme.cardBG};
+    color: ${(props: any) => props.theme.text};
+  }
+  background-color: ${(props: any) => props.theme.cardBG};
+  color: ${(props: any) => props.theme.text};
+
+  &:hover {
+    box-shadow: ${(props: any) => props.theme.boxShadow};
+  }
+`;
 
 export const Wrapper = styled.div`
   width: 80%;
@@ -24,24 +39,14 @@ export const Loading = styled.div`
 export const Projectlength = styled.h1`
   font-size: 2rem;
   font-weight: 700;
+  color: ${(props: any) => props.theme.subtext};
 `;
 
 export const ProjectNum = styled.span`
   font-weight: 500;
 `;
 
-export const ProjectCard = styled.div`
-  /* background-color: cornflowerblue;
-  @media (max-width: 768px) {
-    background-color: lightcoral;
-  }
-  @media (min-width: 992px) {
-    background-color: lightgreen;
-  }
-  @media (min-width: 1200px) {
-    background-color: lightgray;
-  } */
-`;
+export const ProjectCard = styled.div``;
 
 export const ProjectTitleIMG = styled.img`
   height: 15rem;
@@ -73,5 +78,6 @@ export const StackTitle = styled.span`
 `;
 
 export const ProjectStacks = styled.div`
-  border-top: 1px solid black;
+  margin: 0.5rem 0px;
+  border-top: 1px dashed black;
 `;

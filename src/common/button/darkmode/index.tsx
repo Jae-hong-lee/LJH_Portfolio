@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useState } from "react";
+import { IDarkMode } from "../../layout/header/header.container";
 
 const IconButton = styled.button`
   background-color: #f3f4f6;
@@ -24,17 +24,11 @@ const Positioner = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-export default function DarkModeButton() {
-  const [isToggle, setToggle] = useState(true);
-
-  const onClickToggle = () => {
-    setToggle((prev) => !prev);
-  };
-
+export default function DarkModeButton(props: IDarkMode) {
   return (
-    <IconButton type="button" onClick={onClickToggle}>
+    <IconButton type="button" onClick={props.toggleDarkMode}>
       <Positioner />
-      {isToggle === true ? (
+      {props.isDark === true ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

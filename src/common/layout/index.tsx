@@ -7,10 +7,19 @@ const Body = styled.div`
   height: 100%;
 `;
 
-export default function Layout(props: any) {
+export interface DarkMode {
+  isDark: Boolean;
+  toggleDarkMode: () => void;
+  children: any;
+}
+
+export default function Layout(props: DarkMode) {
   return (
     <div>
-      <HeaderContainer />
+      <HeaderContainer
+        isDark={props.isDark}
+        toggleDarkMode={props.toggleDarkMode}
+      />
       <Body>{props.children}</Body>
       <FooterContainer />
     </div>

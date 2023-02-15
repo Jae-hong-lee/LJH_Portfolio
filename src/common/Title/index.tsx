@@ -9,6 +9,7 @@ export const Header = styled.h1`
   font-size: 2.5rem;
   font-weight: 700;
   border-bottom: 4px solid black;
+  border-bottom: ${(props: any) => props.theme.borderBottom};
   cursor: pointer;
   transition-duration: 0.5s;
   &:hover {

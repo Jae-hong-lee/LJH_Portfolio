@@ -8,10 +8,12 @@ export const FooterWrapper = styled.div`
   width: 100%;
   height: 120px;
   padding: 0px 50px;
-  background-color: #e5e7eb;
+  background-color: ${(props: any) => props.theme.footerBG};
+
   @media screen and (max-width: 767px) {
     height: 100px;
   }
+  color: ${(props: any) => props.theme.subtext};
 `;
 
 export const FooterTitle = styled.div`
