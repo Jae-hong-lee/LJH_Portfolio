@@ -2,6 +2,7 @@ import { Button, Card, Col, Divider, Row, Tag } from "antd";
 import * as PS from "./project.styles";
 
 export default function ProjectUI(props: any) {
+  console.log(props);
   return (
     <PS.Wrapper>
       <Divider orientation="center">
@@ -39,7 +40,19 @@ export default function ProjectUI(props: any) {
                     진행기간: {el.properties.진행기간.date.start}~
                     {el.properties.진행기간.date.end}
                     <br />
-                    <a href={el.properties.GitHub.url}>깃허브 바로가기</a>
+                    <PS.ProjectLink href={el.properties.GitHub.url}>
+                      깃허브 바로가기
+                    </PS.ProjectLink>
+                    <br />
+                    {el.properties.Deploy.rich_text[0] ? (
+                      <PS.ProjectLink
+                        href={el.properties.Deploy.rich_text[0].plain_text}
+                      >
+                        배포사이트 바로가기
+                      </PS.ProjectLink>
+                    ) : (
+                      <br />
+                    )}
                   </PS.ProjectContant>
                   <PS.ProjectStacks>
                     <PS.StackTitle>사용스택</PS.StackTitle>

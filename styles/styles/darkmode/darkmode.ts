@@ -15,7 +15,7 @@ export const darkTheme: theme = {
   text: "#fff",
   subtext: "#94a3b8",
   background: "#1E313B",
-  footerBG: "#17242B",
+  footerBG: "#34404E",
   cardBG: "#34404E",
   borderBottom: "4px solid white",
   boxShadow: "0px 0px 10px 1px #FFF",
