@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import TitleHeader from "../../src/common/Title";
 
 export const Wrapper = styled.section`
-  /* background-color: lightgreen; */
   display: flex;
   flex-direction: column;
   align-items: center;

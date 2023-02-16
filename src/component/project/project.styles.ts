@@ -72,6 +72,10 @@ export const ProjectContant = styled.div`
   color: #94a3b8;
 `;
 
+export const ProjectLink = styled.a`
+  width: 100%;
+`;
+
 export const StackTitle = styled.span`
   font-size: 1rem;
   font-weight: 600;

@@ -76,10 +76,16 @@ export const TitleSubHeader = styled.h2`
   transition: 0.5s;
 `;
 
+export const ProfileMainText = styled.span`
+  transition: 0.5em;
+`;
+
 export const ProfileContent = styled.p`
-  color: #94a3b8;
+  color: ${(props: any) => props.theme.subtext};
+  /* color: #94a3b8; */
   line-height: 130%;
   text-align: left;
+  transition: 0.5s;
 `;
 
 export const ProfileImg = styled.div`
