@@ -3,8 +3,8 @@
 ## 📌 나만의 포트폴리오 사이트
 
 - 반응형 웹 사이트 기획부터 배포
-- GitHub Action 과 AWS S3 을 연동하여 CI/CD 파이프라인 구축
-- Notion API 를 통해 Notion DB 와 데이터 통신
+- `GitHub Action` 과 `AWS S3` 을 연동하여 CI/CD 파이프라인 구축
+- `Notion API` 를 통해 Notion DB API 호출 `fetch`
 - DarkMode 구현
 - Section 이동 구현
 
