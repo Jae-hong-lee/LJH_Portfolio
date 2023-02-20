@@ -11,10 +11,6 @@ export const HeaderWrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
   background-color: ${(props: any) => props.theme.background};
-
-  /* 다크모드 */
-  /* https://mycolor.space/?hex=%23845EC2&sub=1 */
-  /* background-color: #3c3841;  */
   animation: focus-in-expand 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   @keyframes focus-in-expand {
     0% {
@@ -27,6 +23,10 @@ export const HeaderWrapper = styled.nav`
       opacity: 1;
     }
   }
+  @media screen and (max-width: 767px) {
+    height: 100%;
+    flex-direction: column;
+  }
 `;
 
 export const Logo = styled.a`
@@ -34,12 +34,19 @@ export const Logo = styled.a`
   font-size: 30px;
   font-weight: 700;
   color: ${(props: any) => props.theme.text};
+  @media screen and (max-width: 767px) {
+    margin: 1rem 0px;
+  }
 `;
 
 export const Navbar = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 export const NavbarMenu = styled.li`
@@ -70,5 +77,14 @@ export const NavText = styled.a`
 
   @media screen and (max-width: 767px) {
     display: none;
+  }
+`;
+
+// 햄버거메뉴
+export const TestMenu = styled.div`
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    width: 100%;
   }
 `;

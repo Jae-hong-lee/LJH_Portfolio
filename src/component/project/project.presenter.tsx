@@ -1,8 +1,7 @@
-import { Button, Card, Col, Divider, Row, Tag } from "antd";
+import { Col, Divider, Row, Tag } from "antd";
 import * as PS from "./project.styles";
 
 export default function ProjectUI(props: any) {
-  console.log(props);
   return (
     <PS.Wrapper>
       <Divider orientation="center">

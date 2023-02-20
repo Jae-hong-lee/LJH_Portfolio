@@ -1,4 +1,5 @@
 import DarkModeButton from "../../button/darkmode";
+import MobileNavbar from "../../button/mobileNav";
 import { IDarkMode } from "./header.container";
 import * as HS from "./header.styles";
 
@@ -21,6 +22,10 @@ export default function HeaderPresenter(props: IDarkMode) {
         <HS.NavText href="https://open.kakao.com/o/sZFvNs4e">
           contact
         </HS.NavText>
+        {/* 햄버거 메뉴 */}
+        <HS.TestMenu>
+          <MobileNavbar LinkData={LinkData} />
+        </HS.TestMenu>
         {/* 다크모드 버튼 작업 */}
         <DarkModeButton
           isDark={props.isDark}
