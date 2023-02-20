@@ -15,6 +15,11 @@ const IconButton = styled.button`
   &:hover {
     background: gray;
   }
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+  }
 `;
 
 const Positioner = styled.div`
