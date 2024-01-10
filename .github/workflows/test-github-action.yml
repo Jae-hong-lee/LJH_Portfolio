@@ -1,5 +1,5 @@
 # Vercel 과 연결해서 배포하기 Test
-name: GitHub Actions Vercel Preview Deployment
+name: GitHub Actions Vercel Preview Deployment (깃허브 액션과 Vercel 배포)
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
