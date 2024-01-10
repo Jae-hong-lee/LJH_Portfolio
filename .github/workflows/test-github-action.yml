@@ -30,13 +30,13 @@ jobs:
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-
-      - name: Deploy # S3에 배포하기
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: |
-          aws s3 cp \
-            --recursive \
-            --region ap-northeast-2 \
-            out s3://github-action-portfolio
+# AWS S3 연동해서 배포하는 방법
+#     - name: Deploy # S3에 배포하기
+#       env:
+#         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#       run: |
+#        aws s3 cp \
+#         --recursive \
+#         --region ap-northeast-2 \
+#         out s3://github-action-portfolio
