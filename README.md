@@ -11,7 +11,7 @@
 ## 📖 기간 및 링크
 
 > 📆 작업기간: 2023년 02월 2일 ~ 2023년 02월 15일 </br>
-> ~~ 🔗 배포링크: http://github-action-portfolio.s3-website.ap-northeast-2.amazonaws.com ~~ </br>
+> ~~🔗 배포링크: http://github-action-portfolio.s3-website.ap-northeast-2.amazonaws.com~~ </br>
 > 🔗 배포링크: https://ljh-portfolio.vercel.app </br>
 > 🔗 프로젝트 문서: [문서 바로가기](https://www.notion.so/883fadd953a0478695cf2129efa9519f)
 
