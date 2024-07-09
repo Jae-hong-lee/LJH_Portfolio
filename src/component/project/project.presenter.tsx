@@ -28,7 +28,7 @@ export default function ProjectUI(props: any) {
                   cover={
                     <PS.ProjectTitleIMG
                       alt="cover image"
-                      src={el.cover.external.url}
+                      src={el.cover?.external.url}
                     />
                   }
                 >
