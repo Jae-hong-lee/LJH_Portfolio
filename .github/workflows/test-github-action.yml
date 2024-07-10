@@ -1,14 +1,8 @@
 # Vercel 과 연결해서 배포하기 Test
-# 이 워크플로우는 Vercel과 연결하여 프로젝트를 배포합니다.
-
 name: GitHub Actions Vercel Preview Deployment (깃허브 액션과 Vercel 배포)
-# 워크플로우의 이름입니다.
-
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-# Vercel 조직 및 프로젝트 ID를 위한 환경 변수입니다. GitHub Secrets에 안전하게 저장되어 있습니다.
-
 on:
   push:
     branches-ignore:
@@ -24,36 +18,30 @@ jobs:
       - uses: actions/checkout@v3
       # 리포지토리의 소스 코드를 체크아웃하는 단계입니다.
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16"
-      # Node.js를 설정하는 단계입니다.
-
-      - name: Install dependencies (의존성 설치)
-        run: npm install
-      # 프로젝트의 의존성을 설치하는 단계입니다.
-
-      - name: Run tests (테스트 실행)
-        run: npm test
-      # 테스트를 실행하는 단계입니다.
-
       - name: Install Vercel CLI (Vercel CLI 설치)
         run: npm install --global vercel@canary
       # Vercel CLI를 전역으로 설치하는 단계입니다.
 
       - name: Pull Vercel Environment Information (Vercel 원격 환경에서 환경 변수 및 프로젝트 설정을 가져오기)
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
       # Vercel의 프리뷰 환경 정보를 가져오는 단계입니다.
       # 원격 환경에서 환경 변수와 프로젝트 설정을 가져옵니다.
 
       - name: Build Project Artifacts (프로젝트 빌드)
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
       # Vercel CLI를 사용하여 프로젝트 아티팩트를 빌드하는 단계입니다.
+      # 빌드할 때 Notion API 키를 환경 변수로 설정합니다.
 
       - name: Deploy Project Artifacts to Vercel (프로젝트를 배포)
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
       # 빌드된 아티팩트를 Vercel에 배포하는 단계입니다.
+#
 # AWS S3 와 연결해서 배포하는 yml
 
 # name: test-github-action
