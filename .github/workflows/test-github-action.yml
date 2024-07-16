@@ -5,10 +5,8 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
   push:
-    branches-ignore:
-      - master
-# 이 워크플로우는 master 브랜치를 제외한 모든 브랜치에 푸시 이벤트가 발생할 때 실행됩니다.
-
+    branches: [master]
+# master 브랜치에 푸시될 때 실행
 jobs:
   Deploy-Preview:
     runs-on: ubuntu-latest
